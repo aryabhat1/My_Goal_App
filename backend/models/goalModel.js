@@ -2,6 +2,11 @@ const mongoose = require("mongoose")
 
 const goalSchema = mongoose.Schema(
     {
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            ref: 'User',
+        },
         text: {
             type: String,
             required: [true, "Please add a text value."],
@@ -12,18 +17,5 @@ const goalSchema = mongoose.Schema(
     }
 )
 
-module.exports = mongoose.model("Goal Schema", goalSchema)
+module.export = mongoose.model("Goal Schema", goalSchema)
 
-// const goalModel = mongoose.Schema(
-//     {
-//         text: {
-//             type: String,
-//             required: [true, "Please add a text value."],
-//         },
-//     },
-//     {
-//         timestamps: true,
-//     }
-// )
-
-// module.export = mongoose.model("Goal Model", goalModel)
