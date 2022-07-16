@@ -12,7 +12,7 @@ const goalSchema = mongoose.Schema(
     }
 )
 
-module.export = mongoose.model("Goal Schema", goalSchema)
+module.exports = mongoose.model("Goal Schema", goalSchema)
 
 // const goalModel = mongoose.Schema(
 //     {
