@@ -5,7 +5,7 @@ const goalSchema = mongoose.Schema(
         user: {
             type: mongoose.Schema.Types.ObjectId,
             required: true,
-            ref: 'User',
+            ref: "User",
         },
         text: {
             type: String,
@@ -17,5 +17,4 @@ const goalSchema = mongoose.Schema(
     }
 )
 
-module.export = mongoose.model("Goal Schema", goalSchema)
-
+module.exports = mongoose.model("Goal Schema", goalSchema)
